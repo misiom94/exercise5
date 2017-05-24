@@ -1,3 +1,9 @@
+
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Optional;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,17 +13,10 @@ import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.jdbc.JdbcTestUtils;
+
 import wdsr.exercise5.dao.TradeDao;
 import wdsr.exercise5.model.Trade;
 
-import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Optional;
-
-/**
- * Created by Mateusz on 2017-05-08.
- */
 @ContextConfiguration("/spring-context.xml")
 @RunWith(value = SpringRunner.class)
 public class TradeDaoTest {
@@ -98,5 +97,6 @@ public class TradeDaoTest {
         Assert.assertEquals(0, JdbcTestUtils.countRowsInTableWhere(jdbcTemplate, "trade", "id=0"));
 
     }
+    
 
 }

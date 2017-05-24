@@ -12,6 +12,10 @@ public class Trade {
 
     private Date date;
 
+    public Trade()
+    {
+    };
+    
     public Trade(Integer id, String asset, Double amount, Date date) {
         this.id = id;
         this.asset = asset;
